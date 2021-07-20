@@ -79,6 +79,7 @@ compose.desktop {
 
 android {
     compileSdkVersion(30)
+    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
         applicationId = "com.louiscad.resume"
         minSdkVersion(24)
