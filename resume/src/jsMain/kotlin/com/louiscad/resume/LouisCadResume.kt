@@ -3,81 +3,31 @@ package com.louiscad.resume
 import androidx.compose.runtime.Composable
 import com.louiscad.resume.data.ResumeDataItem
 import com.louiscad.resume.data.TitledTree
-import com.louiscad.resume.data.content.FatResumeData
 import com.louiscad.resume.data.content.LightResumeData
 import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.FlexDirection
 import org.jetbrains.compose.web.css.Style
-import org.jetbrains.compose.web.css.StyleSheet
 import org.jetbrains.compose.web.css.display
 import org.jetbrains.compose.web.css.flexDirection
 import org.jetbrains.compose.web.css.fontFamily
 import org.jetbrains.compose.web.css.fontSize
 import org.jetbrains.compose.web.css.fontWeight
 import org.jetbrains.compose.web.css.margin
-import org.jetbrains.compose.web.css.media
 import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.css.selectors.descendant
-import org.jetbrains.compose.web.css.selectors.selector
-import org.jetbrains.compose.web.css.textAlign
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.H1
 import org.jetbrains.compose.web.dom.H2
-import org.jetbrains.compose.web.dom.H3
-import org.jetbrains.compose.web.dom.H4
-import org.jetbrains.compose.web.dom.H5
-import org.jetbrains.compose.web.dom.H6
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 
-object ResumeStyleSheet : StyleSheet() {
-    init {
-        "p" {
-            fontSize(11.px)
-            property("margin-block", 0)
-        }
-        "h1, h2, h3, h4, h5, h6" {
-            property("margin-block", 0)
-            fontWeight(400)
-        }
-        "h1" {
-            fontSize(20.px)
-            fontFamily("Overpass", "sans-serif")
-        }
-        "h2" {
-            fontSize(18.px)
-            fontFamily("Overpass", "sans-serif")
-        }
-        "h3" { fontSize(16.px) }
-        "h4" { fontSize(14.px) }
-        "h5" { fontSize(13.px) }
-    }
-
-    val root by style {
-        fontFamily("Roboto", "sans-serif")
-        fontWeight(400)
-        property("white-space", "pre-line")
-        media("print") {
-            margin((-10).px)
-        }
-    }
-    val resumeSection by style {
-        "h1, h2, h3, h4, h5, h6".split(", ").map {
-            descendant(self, selector(it))
-        }.joinToString() style {
-            textAlign("center")
-            property("margin-block-start", 8.px)
-            property("margin-block-end", 8.px)
-        }
-    }
-}
+val resumeStyleSheet: ResumeStyleSheet = LouisCadResumeStyleSheet
 
 @Composable
 actual fun LouisCadResume() {
-    Style(ResumeStyleSheet)
+    Style(resumeStyleSheet)
     val resumeData = LightResumeData
     Div({
-        classes(ResumeStyleSheet.root)
+        classes(resumeStyleSheet.root)
         style {
             display(DisplayStyle.Flex)
             flexDirection(FlexDirection.Row)
@@ -92,7 +42,7 @@ actual fun LouisCadResume() {
                 }
             }) {
                 H1 { Text(resumeData.name) }
-                H2 ({
+                H2({
                     style { fontFamily("Roboto"); fontSize(14.px); fontWeight(300) }
                 }) { Text(resumeData.whatIAmLookingFor) }
                 P { Text(resumeData.desiredContract) }
@@ -107,7 +57,7 @@ actual fun LouisCadResume() {
                 }) { LinkableText(resumeData.myLinks.joinToString(separator = "\n")) }
             }
             Div({
-                classes(ResumeStyleSheet.resumeSection)
+                classes(resumeStyleSheet.sectionsColumn)
             }) {
                 ResumeBranch(resumeData.whatILove())
             }
@@ -138,7 +88,7 @@ private fun ResumeColumn(
     content: @Composable () -> Unit
 ) = Flex(
     weight = weight,
-    cssClass = ResumeStyleSheet.resumeSection,
+    cssClass = resumeStyleSheet.sectionsColumn,
     content = content
 )
 

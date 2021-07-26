@@ -19,7 +19,7 @@ object LightResumeData {
 
     val title = "Senior software developer"
 
-    val whatIAmLookingFor = "Looking for a developer relations position focused on Kotlin"
+    val whatIAmLookingFor = "Looking for a Developer Relations position focused on Kotlin"
 
     val desiredContract = "Desired contract: Part-time"
 
@@ -76,7 +76,7 @@ object LightResumeData {
         title = "Experience",
         TitledTree.Branch(
             title = "Open source authoring",
-            "[Splitties] (set of mini libraries for Android & Kotlin Multiplatform development), 1.8K stars on GitHub",
+            "[Splitties](https://github.com/LouisCAD/Splitties) (set of mini libraries for Android & Kotlin Multiplatform development), 1.8K stars on GitHub",
             "[refreshVersions](https://github.com/jmfayard/refreshVersions), Gradle plugin, almost 1K stars",
             "[CompleteKotlin](https://github.com/LouisCAD/CompleteKotlin), 161 stars since release in June 2021",
             "[beepiz-external-control-example](https://github.com/Beepiz/beepiz-external-control-example) (IPC on Android)",

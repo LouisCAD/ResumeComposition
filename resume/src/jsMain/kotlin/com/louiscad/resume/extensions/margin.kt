@@ -1,12 +1,16 @@
 package com.louiscad.resume.extensions
 
-import org.jetbrains.compose.common.internal.castOrCreate
-import org.jetbrains.compose.common.ui.Modifier
-import org.jetbrains.compose.common.ui.unit.Dp
-import org.jetbrains.compose.common.ui.unit.dp
 import org.jetbrains.compose.web.css.CSSUnitValue
 import org.jetbrains.compose.web.css.StyleBuilder
-import org.jetbrains.compose.web.css.px
+
+/**
+ * This overload allows setting margin for all sides.
+ * It exists because the Compose for Web one leads to an overload
+ * resolution ambiguity because of the vararg parameter.
+ */
+fun StyleBuilder.margin(all: CSSUnitValue) {
+    property("margin", all)
+}
 
 fun StyleBuilder.margin(
     horizontal: CSSUnitValue? = null,
