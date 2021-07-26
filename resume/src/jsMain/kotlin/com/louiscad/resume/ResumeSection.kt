@@ -18,6 +18,7 @@ import org.jetbrains.compose.web.dom.H6
 fun ResumeSection(
     title: String,
     styleSheet: ResumeStyleSheet = resumeStyleSheet,
+    useKotlinColors: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val sectionDepth = CurrentDepth.current
@@ -25,6 +26,7 @@ fun ResumeSection(
         style {
             if (sectionDepth == 2u) {
                 classes(styleSheet.borderedSection)
+                if (useKotlinColors) classes("kotlin-colors-conic-gradient")
             }
         }
     }) {

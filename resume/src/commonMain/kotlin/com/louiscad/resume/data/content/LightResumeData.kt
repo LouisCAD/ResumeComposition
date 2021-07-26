@@ -1,6 +1,5 @@
 package com.louiscad.resume.data.content
 
-import com.louiscad.resume.Color
 import com.louiscad.resume.data.invoke
 import com.louiscad.resume.data.ResumeDataItem
 import com.louiscad.resume.data.TitledTree
@@ -114,11 +113,12 @@ object LightResumeData {
         title = "Achievements",
         TitledTree.Branch(
             title = "Issue reporting",
-            "Reported 190 Kotlin issues, with 107 resolved to date",
+            "Reported 190 Kotlin issues on YouTrack, with 107 resolved to date",
             "Reported 270 issues on Google's/Android's issue tracker, with 70 fixed to date"
         ),
         TitledTree.Branch(
             title = "Recognition",
+            useKotlinColors = true,
             "Google Developer Expert for Kotlin since 2020"
         )
     )
@@ -171,6 +171,7 @@ object LightResumeData {
         ),
         TitledTree.Branch(
             title = "Kotlin",
+            useKotlinColors = true,
             "Coroutines (in depth)",
             "Multiplatform library development, including Kotlin/Native",
             "Scripting, partial and full automation",

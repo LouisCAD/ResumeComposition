@@ -28,6 +28,18 @@ internal operator fun TitledTree.Branch.Companion.invoke(
 
 internal operator fun TitledTree.Branch.Companion.invoke(
     title: String,
+    useKotlinColors: Boolean,
+    vararg textNodes: String
+): TitledTree.Branch<ResumeDataItem> {
+    return TitledTree.Branch(
+        title = title,
+        useKotlinColors = useKotlinColors,
+        nodes = textNodes.asList().map { TitledTree.Leaf(ResumeDataItem.Text(it)) }
+    )
+}
+
+internal operator fun TitledTree.Branch.Companion.invoke(
+    title: String,
     vararg lines: Pair<String, ImageVector?>
 ): TitledTree.Branch<ResumeDataItem> {
     return TitledTree.Branch(

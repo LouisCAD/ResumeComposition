@@ -31,6 +31,9 @@ object LouisCadResumeStyleSheet : ResumeStyleSheet() {
             top(0.px); bottom(0.px); left(0.px); right(0.px)
             property("content", "''")
         }
+        "$self.kotlin-colors-conic-gradient:before" {
+            background("conic-gradient(from 225deg, #7F52FF, #C711E1, #E44857, #C711E1, #7F52FF)")
+        }
         background("white")
         border(width = borderSize, style = LineStyle.Solid, color = Color("transparent"))
         borderRadius(10.px)

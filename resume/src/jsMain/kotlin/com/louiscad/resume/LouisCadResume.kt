@@ -73,7 +73,7 @@ actual fun LouisCadResume() {
                 Div({
                     classes(resumeStyleSheet.nonSectionColumn)
                 }) {
-                    P ({
+                    P({
                         style { textAlign("center") }
                     }) {
                         LinkableText(resumeData.madeWith)
@@ -116,7 +116,10 @@ private fun Flex(
 @Composable
 private fun ResumeBranch(tree: TitledTree<ResumeDataItem>) {
     when (tree) {
-        is TitledTree.Branch -> ResumeSection(title = tree.title) {
+        is TitledTree.Branch -> ResumeSection(
+            title = tree.title,
+            useKotlinColors = tree.useKotlinColors
+        ) {
             tree.nodes.forEach { ResumeBranch(it) }
         }
         is TitledTree.Leaf -> ResumeItem(tree.data)
