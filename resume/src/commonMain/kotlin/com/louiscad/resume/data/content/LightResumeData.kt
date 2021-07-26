@@ -153,6 +153,9 @@ object LightResumeData {
         )
     )
 
+    val madeWith = "Made in Kotlin with Compose for Web\n" +
+            "See the code and the Android version on [github.com/LouisCAD/ResumeComposition](https://github.com/LouisCAD/ResumeComposition)"
+
     val skillsDev: TitledTree.Branch<ResumeDataItem> = TitledTree.Branch(
         title = "Skills (software development)",
         TitledTree.Branch(

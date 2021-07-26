@@ -3,14 +3,19 @@ package com.louiscad.resume
 import com.louiscad.resume.extensions.margin
 import com.louiscad.resume.extensions.padding
 import org.jetbrains.compose.web.css.Color
+import org.jetbrains.compose.web.css.DisplayStyle
+import org.jetbrains.compose.web.css.FlexDirection
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.StyleSheet
 import org.jetbrains.compose.web.css.border
 import org.jetbrains.compose.web.css.borderRadius
 import org.jetbrains.compose.web.css.color
+import org.jetbrains.compose.web.css.display
+import org.jetbrains.compose.web.css.flexDirection
 import org.jetbrains.compose.web.css.fontFamily
 import org.jetbrains.compose.web.css.fontSize
 import org.jetbrains.compose.web.css.fontWeight
+import org.jetbrains.compose.web.css.margin
 import org.jetbrains.compose.web.css.media
 import org.jetbrains.compose.web.css.paddingBottom
 import org.jetbrains.compose.web.css.px
@@ -62,6 +67,15 @@ abstract class ResumeStyleSheet : StyleSheet() {
             property("margin-block-start", 8.px)
             property("margin-block-end", 8.px)
         }
+    }
+
+    /**
+     * Meant for columns (div elements) containing text above or below a [sectionsColumn].
+     */
+    open val nonSectionColumn by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+        margin(10.px)
     }
 
     open val borderedSection: String by style {

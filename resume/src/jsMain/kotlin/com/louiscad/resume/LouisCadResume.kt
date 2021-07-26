@@ -12,8 +12,8 @@ import org.jetbrains.compose.web.css.flexDirection
 import org.jetbrains.compose.web.css.fontFamily
 import org.jetbrains.compose.web.css.fontSize
 import org.jetbrains.compose.web.css.fontWeight
-import org.jetbrains.compose.web.css.margin
 import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.css.textAlign
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.H1
 import org.jetbrains.compose.web.dom.H2
@@ -35,11 +35,7 @@ actual fun LouisCadResume() {
     }) {
         Flex(weight = resumeData.columnsWeights.whatILove) {
             Div({
-                style {
-                    display(DisplayStyle.Flex)
-                    flexDirection(FlexDirection.Column)
-                    margin(10.px)
-                }
+                classes(resumeStyleSheet.nonSectionColumn)
             }) {
                 H1 { Text(resumeData.name) }
                 H2({
@@ -74,6 +70,15 @@ actual fun LouisCadResume() {
             }) {
                 ResumeBranch(resumeData.achievements)
                 ResumeBranch(resumeData.skillsGeneral)
+                Div({
+                    classes(resumeStyleSheet.nonSectionColumn)
+                }) {
+                    P ({
+                        style { textAlign("center") }
+                    }) {
+                        LinkableText(resumeData.madeWith)
+                    }
+                }
             }
         }
         ResumeColumn(weight = resumeData.columnsWeights.skillsDev) {
