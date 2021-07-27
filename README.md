@@ -4,7 +4,11 @@
 
 This project is the source code of the resume/CV of Louis CAD.
 
-TK: put clickable thumbnail of the Resume.
+[The latest PDF export is available here.](Louis%20CAD%20Resume%202021-07-27.pdf)
+
+Here's a _blurry picture_ that you can click to see the crisp PDF document:
+
+[![](Louis%20Resume%202021-07-27.jpg)](Louis%20CAD%20Resume%202021-07-27.pdf)
 
 It is built with Kotlin, Compose for Web, and also supports Jetpack Compose for Android, which shares code with a Desktop version.
 
@@ -26,9 +30,62 @@ I made my Resume with Jetpack Compose for multiple reasons:
 
 ## How
 
-TK: For non developers
+If you just want to see the latest Resume, [it is here in PDF](Louis%20CAD%20Resume%202021-07-27.pdf).
 
-TK: For developers
+### Building the project
+
+**Warning:** If you want to explore the project in an IDE, it's best to use IntelliJ IDEA 2021.1 or later.
+It might work in recent Android Studio versions as well, but it hasn't been tested there.
+
+#### WEB version
+
+##### Development mode
+
+In development mode (no minification or deep dead code elimination), there are two ways to run the project:
+
+If you just want to build the webpage, run the following command:
+```shell
+./gradlew :app:jsBrowserDevelopmentExecutableDistribution
+```
+Once the command completes, you'll find the resulting html and js files in the [app/build/developmentExecutable](app/build/developmentExecutable) directory.
+You can simply open the [index.html](app/build/developmentExecutable/index.html) file in a WEB browser like Google Chrome or Mozilla Firefox to see the result.
+
+If you want to have Gradle automatically rebuild on save, and refresh the page on compilation success, you can run the following command instead:
+
+```shell
+./gradlew --continuous :app:jsBrowserRun
+```
+
+It will wait for changes and build repeatedly until you stop it manually.
+
+##### Production mode
+
+As for development mode, there are two ways to run the production version of the project.
+The production mode will take a bit longer to compile because it'll try to find dead/unused code and remove it from the output to save storage and bandwidth (if published online). This step is called Dead Code Elimination (DCE). On this project, the output size has been observed to be 10 times smaller with DCE (from 6.8 MB down to under 0.5 MB).
+
+If you just want to build the webpage, run the following command:
+```shell
+./gradlew :app:jsBrowserDistribution
+```
+
+Once the command completes, you'll find the resulting html and js files in the [app/build/distributions](app/build/distributions) directory.
+You can simply open the [index.html](app/build/distributions/index.html) file in a WEB browser like Google Chrome or Mozilla Firefox to see the result. The entire content of the directory can then be moved to a place that will serve the static files.
+
+If you want to have Gradle automatically rebuild on save, and refresh the page on compilation success, you can run the following command instead:
+
+```shell
+./gradlew --continuous :app:jsBrowserProductionRun
+```
+
+It will wait for changes and build (with DCE) repeatedly until you stop it manually.
+
+#### Android version
+
+You can run the `app` module like any other Android app, but please, keep in mind that printing and PDF exporting is not integrated in the project in this repository yet, so you won't be able to see it correctly at all.
+
+#### Desktop version
+
+This version is not complete and doesn't layout properly on all screen sizes (not responsive yet), but can still be run like any other Compose for Desktop app.
 
 ## License
 
