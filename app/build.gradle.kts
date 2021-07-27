@@ -10,6 +10,15 @@ plugins {
 group = "com.louiscad.resume"
 version = property("thisProjectVersion") as String
 
+tasks.register<Copy>("buildForGitHubPages") {
+    group = "kotlin browser"
+    description = "This is a custom task (not from Kotlin Gradle plugin) that will " +
+            "build the production website and put it in the docs directory."
+    dependsOn("jsBrowserDistribution")
+    from(layout.buildDirectory.dir("distributions"))
+    into(rootProject.layout.projectDirectory.dir("docs"))
+}
+
 kotlin {
     android()
     jvm("desktop") {
