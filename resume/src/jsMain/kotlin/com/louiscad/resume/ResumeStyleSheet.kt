@@ -15,7 +15,6 @@ import org.jetbrains.compose.web.css.flexDirection
 import org.jetbrains.compose.web.css.fontFamily
 import org.jetbrains.compose.web.css.fontSize
 import org.jetbrains.compose.web.css.fontWeight
-import org.jetbrains.compose.web.css.margin
 import org.jetbrains.compose.web.css.media
 import org.jetbrains.compose.web.css.paddingBottom
 import org.jetbrains.compose.web.css.px
