@@ -4,11 +4,11 @@
 
 This project is the source code of the resume/CV of Louis CAD.
 
-[The latest PDF export is available here.](Louis%20CAD%20Resume%202021-07-27.pdf)
+[The latest PDF export is available here.](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202021-07-27.pdf)
 
 Here's a _blurry picture_ that you can click to see the crisp PDF document:
 
-[![](Louis%20Resume%202021-07-27.jpg)](Louis%20CAD%20Resume%202021-07-27.pdf)
+[![](Louis%20Resume%202021-07-27.jpg)](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202021-07-27.pdf)
 
 It is built with Kotlin, Compose for Web, and also supports Jetpack Compose for Android, which shares code with a Desktop version.
 
@@ -30,7 +30,7 @@ I made my Resume with Jetpack Compose for multiple reasons:
 
 ## How
 
-If you just want to see the latest Resume, [it is here in PDF](Louis%20CAD%20Resume%202021-07-27.pdf).
+If you just want to see the latest Resume, [it is here in PDF](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202021-07-27.pdf).
 
 ### Building the project
 
