@@ -57,7 +57,9 @@ abstract class ResumeStyleSheet : StyleSheet() {
         media("print") {
             margin((-10).px)
         }
+
         // Keep background graphics, and keep colors intact.
+        property("color-adjust", "exact")
         property("-webkit-print-color-adjust", "exact")
     }
     open val sectionsColumn by style {
