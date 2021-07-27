@@ -26,4 +26,16 @@ I made my Resume with Jetpack Compose for multiple reasons:
 
 ## How
 
-TK
+TK: For non developers
+
+TK: For developers
+
+## License
+
+All rights reserved for Louis Cognault Ayeva Derman.
+
+You can take inspiration from this project and take some code so long as:
+1. You make sure your Resume doesn't look like mine (content, colors).
+2. You don't make a Resume generator service with it without my approval (ask via email).
+
+Feel free to ask via email if you're unsure if you'd violate this license.
