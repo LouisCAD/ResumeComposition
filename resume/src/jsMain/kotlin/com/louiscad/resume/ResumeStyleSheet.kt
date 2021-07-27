@@ -16,6 +16,7 @@ import org.jetbrains.compose.web.css.fontFamily
 import org.jetbrains.compose.web.css.fontSize
 import org.jetbrains.compose.web.css.fontWeight
 import org.jetbrains.compose.web.css.media
+import org.jetbrains.compose.web.css.mm
 import org.jetbrains.compose.web.css.paddingBottom
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.selectors.descendant
@@ -56,6 +57,13 @@ abstract class ResumeStyleSheet : StyleSheet() {
         paddingBottom(0.px)
         media("print") {
             margin((-10).px)
+        }
+        "@page" {
+            property("size", "auto")
+            margin(0.mm)
+        }
+        "html" {
+            margin(0.mm)
         }
 
         // Keep background graphics, and keep colors intact.
