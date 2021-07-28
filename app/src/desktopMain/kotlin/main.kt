@@ -1,8 +1,11 @@
+import androidx.compose.ui.window.Window
 import com.louiscad.resume.App
-import androidx.compose.desktop.Window
+import androidx.compose.ui.window.application
 import com.louiscad.resume.LouisCadResume
 
-fun main() = Window {
-    LouisCadResume()
-//    App()
+fun main() = application {
+    Window(onCloseRequest = {}, title = "Louis CAD Resume") {
+        LouisCadResume()
+//      App()
+    }
 }

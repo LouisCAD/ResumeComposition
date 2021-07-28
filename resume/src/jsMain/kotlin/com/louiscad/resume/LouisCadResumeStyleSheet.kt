@@ -2,7 +2,6 @@ package com.louiscad.resume
 
 import com.louiscad.resume.extensions.margin
 import com.louiscad.resume.extensions.padding
-import com.louiscad.resume.extensions.unaryMinus
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.Position
@@ -18,6 +17,7 @@ import org.jetbrains.compose.web.css.position
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.right
 import org.jetbrains.compose.web.css.top
+import org.jetbrains.compose.web.css.unaryMinus
 
 object LouisCadResumeStyleSheet : ResumeStyleSheet() {
 

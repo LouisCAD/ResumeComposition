@@ -50,7 +50,7 @@ You can also build it yourself by following the instructions below.
 
 ### Building the project
 
-**Warning:** If you want to explore the project in an IDE, it's best to use IntelliJ IDEA 2021.1 or later.
+**Warning:** If you want to explore the project in an IDE, it's best to **use IntelliJ IDEA 2021.2 or later**.
 It might work in recent Android Studio versions as well, but it hasn't been tested there.
 
 #### WEB version

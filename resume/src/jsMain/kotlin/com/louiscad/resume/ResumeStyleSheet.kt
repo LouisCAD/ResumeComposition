@@ -19,6 +19,7 @@ import org.jetbrains.compose.web.css.media
 import org.jetbrains.compose.web.css.mm
 import org.jetbrains.compose.web.css.paddingBottom
 import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.css.rgb
 import org.jetbrains.compose.web.css.selectors.descendant
 import org.jetbrains.compose.web.css.selectors.selector
 import org.jetbrains.compose.web.css.textAlign
@@ -51,7 +52,7 @@ abstract class ResumeStyleSheet : StyleSheet() {
         fontWeight(400)
         property("white-space", "pre-line")
         "a, a:visited" {
-            color(Color.RGB(0x00, 0xb5, 0xe5))
+            color(rgb(0x00, 0xb5, 0xe5))
         }
         property("padding", "0.4in")
         paddingBottom(0.px)
