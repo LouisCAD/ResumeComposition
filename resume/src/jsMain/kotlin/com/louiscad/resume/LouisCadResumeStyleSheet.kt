@@ -13,12 +13,20 @@ import org.jetbrains.compose.web.css.borderRadius
 import org.jetbrains.compose.web.css.bottom
 import org.jetbrains.compose.web.css.boxSizing
 import org.jetbrains.compose.web.css.left
+import org.jetbrains.compose.web.css.mm
 import org.jetbrains.compose.web.css.position
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.right
 import org.jetbrains.compose.web.css.top
 
 object LouisCadResumeStyleSheet : ResumeStyleSheet() {
+
+    init {
+        "@page" {
+            property("size", "A4 landscape")
+            margin(0.mm)
+        }
+    }
 
     override val borderedSection: String by style {
         val borderSize = 2.px

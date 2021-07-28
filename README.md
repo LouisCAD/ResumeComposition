@@ -38,8 +38,7 @@ If you just want to see the latest Resume, [it is here in PDF](https://github.co
 
 When printing the WEB version or exporting it to PDF,
 to get the best rendering that fits nicely on one page,
-**make sure you use Google Chrome, or a Chromium based browser**,
-and select A4 paper size, in landscape orientation.
+**make sure you use Google Chrome, or a Chromium based browser (like Edge by Microsoft)**.
 
 Firefox will have a slightly different rendering that might clash with printer margins and will
 print an extra blank page by default.
