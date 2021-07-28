@@ -4,11 +4,13 @@
 
 This project is the source code of the resume/CV of Louis CAD.
 
-[The latest PDF export is available here.](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202021-07-27.pdf)
+[The latest PDF export is available here](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202021-07-27.pdf), it is ready to print.
 
 Here's a _blurry picture_ that you can click to see the crisp PDF document:
 
 [![](Louis%20Resume%202021-07-27.jpg)](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202021-07-27.pdf)
+
+You can also see the WEB version at [resume.louiscad.com](https://resume.louiscad.com).
 
 It is built with Kotlin, Compose for Web, and also supports Jetpack Compose for Android, which shares code with a Desktop version.
 
@@ -31,6 +33,21 @@ I made my Resume with Jetpack Compose for multiple reasons:
 ## How
 
 If you just want to see the latest Resume, [it is here in PDF](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202021-07-27.pdf).
+
+### Exporting to PDF or printing the WEB version
+
+When printing the WEB version or exporting it to PDF,
+to get the best rendering that fits nicely on one page,
+**make sure you use Google Chrome, or a Chromium based browser**,
+and select A4 paper size, in landscape orientation.
+
+Firefox will have a slightly different rendering that might clash with printer margins and will
+print an extra blank page by default.
+
+Safari will not print or export correctly because it'll add extra margins that cannot be disabled (or hardly, maybe deep in the options).
+
+The WEB version is pre-built and available at [resume.louiscad.com](https://resume.louiscad.com).
+You can also build it yourself by following the instructions below.
 
 ### Building the project
 
