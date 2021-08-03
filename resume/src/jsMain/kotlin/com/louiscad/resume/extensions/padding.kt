@@ -24,6 +24,15 @@ fun Modifier.padding(horizontal: Dp = 0.dp, vertical: Dp = 0.dp): Modifier = cas
     }
 }
 
+/**
+ * This overload allows setting padding for all sides.
+ * It exists because the Compose for Web one leads to an overload
+ * resolution ambiguity because of the vararg parameter.
+ */
+fun StyleBuilder.padding(all: CSSUnitValue) {
+    property("padding", all)
+}
+
 fun StyleBuilder.padding(
     horizontal: CSSUnitValue? = null,
     vertical: CSSUnitValue? = null
