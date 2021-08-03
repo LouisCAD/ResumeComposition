@@ -5,7 +5,6 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.compositionLocalOf
 import com.louiscad.resume.data.ResumeDataItem
 import org.jetbrains.compose.common.foundation.layout.Box
-import org.jetbrains.compose.common.foundation.layout.Column
 import org.jetbrains.compose.common.material.Text
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.H2
@@ -23,14 +22,14 @@ fun ResumeSection(
 ) {
     val sectionDepth = CurrentDepth.current
     Div({
-        style {
-            if (sectionDepth == 2u) {
-                classes(styleSheet.borderedSection)
-                if (useKotlinColors) classes("kotlin-colors-conic-gradient")
-            }
+        if (sectionDepth == 2u) {
+            classes(styleSheet.borderedSectionWrapper)
+            if (useKotlinColors) classes("kotlin-colors-conic-gradient")
         }
     }) {
-        Column {
+        Div({
+            if (sectionDepth == 2u) classes(styleSheet.borderedSection)
+        }) {
             when (sectionDepth) {
                 1u -> H2 { Text(title) }
                 2u -> H3 { Text(title) }

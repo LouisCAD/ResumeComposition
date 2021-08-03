@@ -4,20 +4,14 @@ import com.louiscad.resume.extensions.margin
 import com.louiscad.resume.extensions.padding
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.LineStyle
-import org.jetbrains.compose.web.css.Position
 import org.jetbrains.compose.web.css.background
-import org.jetbrains.compose.web.css.backgroundClip
 import org.jetbrains.compose.web.css.border
 import org.jetbrains.compose.web.css.borderRadius
-import org.jetbrains.compose.web.css.bottom
-import org.jetbrains.compose.web.css.boxSizing
-import org.jetbrains.compose.web.css.left
+import org.jetbrains.compose.web.css.minWidth
+import org.jetbrains.compose.web.css.minus
 import org.jetbrains.compose.web.css.mm
-import org.jetbrains.compose.web.css.position
 import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.css.right
-import org.jetbrains.compose.web.css.top
-import org.jetbrains.compose.web.css.unaryMinus
+import org.jetbrains.compose.web.css.times
 
 object LouisCadResumeStyleSheet : ResumeStyleSheet() {
 
@@ -28,30 +22,31 @@ object LouisCadResumeStyleSheet : ResumeStyleSheet() {
         }
     }
 
-    override val borderedSection: String by style {
-        val borderSize = 2.px
-        "$self:before" {
-            background("conic-gradient(from 150deg, magenta, cyan, magenta)")
-            margin(-borderSize)
-            property("border-radius", "inherit")
-            property("z-index", -1)
-            position(Position.Absolute)
-            top(0.px); bottom(0.px); left(0.px); right(0.px)
-            property("content", "''")
-        }
-        "$self.kotlin-colors-conic-gradient:before" {
+    private val borderSize = 2.px
+    private val borderRadius = 10.px
+
+    override val root by style {
+        minWidth(1049.px)
+    }
+
+    override val borderedSectionWrapper: String by style {
+        background("conic-gradient(from 150deg, magenta, cyan, magenta)")
+        "$self.kotlin-colors-conic-gradient" {
             background("conic-gradient(from 225deg, #7F52FF, #C711E1, #E44857, #C711E1, #7F52FF)")
         }
+        padding(borderSize)
+        borderRadius(borderRadius)
+
+        margin(horizontal = 5.px, vertical = 10.px)
+        property("margin-block", 10.px)
+    }
+
+    override val borderedSection: String by style {
         background("white")
         border(width = borderSize, style = LineStyle.Solid, color = Color("transparent"))
-        borderRadius(10.px)
-        position(Position.Relative)
-        backgroundClip("padding-box")
-        boxSizing("border-box")
+        borderRadius(borderRadius - borderSize)
 
-        property("margin-block", 10.px)
-        margin(horizontal = 5.px, vertical = 10.px)
-        padding(horizontal = 10.px)
-        padding(bottom = 10.px)
+        padding(horizontal = 10.px - borderSize)
+        padding(bottom = 10.px - (borderSize * 2))
     }
 }

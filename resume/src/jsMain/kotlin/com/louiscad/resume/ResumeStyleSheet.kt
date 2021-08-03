@@ -90,13 +90,7 @@ abstract class ResumeStyleSheet : StyleSheet() {
         margin(10.px)
     }
 
-    open val borderedSection: String by style {
-        property("margin-block", 10.px)
-        val borderSize = 2.px
-        margin(horizontal = 5.px, vertical = 10.px)
-        border(width = borderSize, style = LineStyle.Solid, color = Color("#00bbff"))
-        borderRadius(10.px)
-        padding(horizontal = 10.px)
-        padding(bottom = 10.px)
-    }
+    open val borderedSectionWrapper: String by style {}
+
+    open val borderedSection by style {}
 }
