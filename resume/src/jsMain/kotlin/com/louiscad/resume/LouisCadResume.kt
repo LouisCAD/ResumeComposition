@@ -83,6 +83,16 @@ actual fun LouisCadResume() {
         }
         ResumeColumn(weight = resumeData.columnsWeights.skillsDev) {
             ResumeBranch(resumeData.skillsDev)
+            Div({
+                classes(resumeStyleSheet.nonSectionColumn)
+            }) {
+                P({
+                    style { textAlign("center") }
+                }) {
+                    val todayDateString = js("new Date().toISOString().slice(0, 10)")
+                    Text("Generation date: $todayDateString")
+                }
+            }
         }
     }
 }
