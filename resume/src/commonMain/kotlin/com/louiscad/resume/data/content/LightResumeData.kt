@@ -105,7 +105,7 @@ object LightResumeData {
             title = "Public speaking",
             "Gave 13 talks (6 in 🇬🇧 and 7 in 🇫🇷) on Kotlin, coroutines, Android, and WearOS between 2017 and 2021 " +
                     "at conferences like Android Makers, Talking.kt, Mobilization (PL), and FOSDEM, and at various meetups",
-            "Was invited to 3 podcast episodes: Android Leaks twice, and The Developers Bakery once"
+            "Participated in 3 podcast episodes: Android Leaks twice, and The Developers Bakery once"
         )
     )
 
