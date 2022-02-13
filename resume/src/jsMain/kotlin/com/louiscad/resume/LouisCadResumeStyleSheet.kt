@@ -25,7 +25,7 @@ object LouisCadResumeStyleSheet : ResumeStyleSheet() {
     private val borderSize = 2.px
     private val borderRadius = 10.px
 
-    override val root by style {
+    override val container by style {
         minWidth(1049.px)
     }
 

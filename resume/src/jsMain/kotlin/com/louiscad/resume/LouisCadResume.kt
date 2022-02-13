@@ -27,7 +27,7 @@ actual fun LouisCadResume() {
     Style(resumeStyleSheet)
     val resumeData = LightResumeData
     Div({
-        classes(resumeStyleSheet.root)
+        classes(resumeStyleSheet.container)
         style {
             display(DisplayStyle.Flex)
             flexDirection(FlexDirection.Row)

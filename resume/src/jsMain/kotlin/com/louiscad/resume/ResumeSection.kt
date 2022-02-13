@@ -4,14 +4,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.compositionLocalOf
 import com.louiscad.resume.data.ResumeDataItem
-import org.jetbrains.compose.common.foundation.layout.Box
-import org.jetbrains.compose.common.material.Text
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.H3
 import org.jetbrains.compose.web.dom.H4
 import org.jetbrains.compose.web.dom.H5
 import org.jetbrains.compose.web.dom.H6
+import org.jetbrains.compose.web.dom.Text
 
 @Composable
 fun ResumeSection(
@@ -50,7 +49,7 @@ fun ResumeSection(
     title: String,
     items: List<ResumeDataItem>
 ) = ResumeSection(title = title) {
-    items.forEach { item -> Box { ResumeItem(item) } }
+    items.forEach { item -> Div { ResumeItem(item) } }
 }
 
 private val CurrentDepth = compositionLocalOf { 1u }
