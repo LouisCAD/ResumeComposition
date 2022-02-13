@@ -83,7 +83,7 @@ object LightResumeData {
             "Draft projects: [CameraCoroutines](https://github.com/Beepiz/CameraCoroutines), [BleScanCoroutines](https://github.com/Beepiz/BleScanCoroutines) (draft)",
         ),
         TitledTree.Branch(
-            title = "2014-2021 Android app developer at Beepiz (fulltime)",
+            title = "2014-2022 Android app developer at Beepiz (fulltime)",
             TitledTree.Branch(
                 title = "Technologies used",
                 "Java 7 (mostly until 2016)",
