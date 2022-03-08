@@ -1,9 +1,14 @@
 package com.louiscad.resume
 
 import com.louiscad.resume.extensions.margin
+import com.louiscad.resume.extensions.padding
+import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.FlexDirection
+import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.StyleSheet
+import org.jetbrains.compose.web.css.border
+import org.jetbrains.compose.web.css.borderRadius
 import org.jetbrains.compose.web.css.color
 import org.jetbrains.compose.web.css.display
 import org.jetbrains.compose.web.css.flexDirection
@@ -15,6 +20,8 @@ import org.jetbrains.compose.web.css.mm
 import org.jetbrains.compose.web.css.paddingBottom
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.rgb
+import org.jetbrains.compose.web.css.selectors.descendant
+import org.jetbrains.compose.web.css.selectors.selector
 import org.jetbrains.compose.web.css.textAlign
 
 abstract class ResumeStyleSheet : StyleSheet() {
@@ -40,7 +47,7 @@ abstract class ResumeStyleSheet : StyleSheet() {
         "h5" { fontSize(13.px) }
     }
 
-    open val container by style {
+    open val root by style {
         fontFamily("Roboto", "sans-serif")
         fontWeight(400)
         property("white-space", "pre-line")
@@ -66,7 +73,7 @@ abstract class ResumeStyleSheet : StyleSheet() {
     }
     open val sectionsColumn by style {
         "h1, h2, h3, h4, h5, h6".split(", ").map {
-            desc(self, selector(it))
+            descendant(self, selector(it))
         }.joinToString() style {
             textAlign("center")
             property("margin-block-start", 8.px)
