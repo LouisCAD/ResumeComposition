@@ -18,7 +18,7 @@ object LightResumeData {
 
     val title = "Senior software developer"
 
-    val whatIAmLookingFor = "Looking for a Developer Relations position focused on Kotlin"
+    val whatIAm = "Kotlin Multiplatform and Android expert, focused on reliability"
 
     val desiredContract = "Desired contract: Part-time"
 
@@ -113,8 +113,8 @@ object LightResumeData {
         title = "Achievements",
         TitledTree.Branch(
             title = "Issue reporting",
-            "Reported 190 Kotlin issues on YouTrack, with 107 resolved to date",
-            "Reported 270 issues on Google's/Android's issue tracker, with 70 fixed to date"
+            "Reported 202 Kotlin issues on YouTrack, with 126 resolved to date",
+            "Reported 295 issues on Google's/Android's issue tracker, with 81 fixed to date"
         ),
         TitledTree.Branch(
             title = "Recognition",
@@ -188,11 +188,11 @@ object LightResumeData {
             ),
             TitledTree.Branch(
                 title = "APIs I'm familiar with",
-                "android.view (programmatically)",
                 "Jetpack Compose",
+                "android.view (programmatically)",
                 "BLE (BluetoothLeScanner & BluetoothGatt)",
                 "SensorManager",
-                "Camera2",
+                "CameraX & Camera2",
                 "Most of AndroidX",
                 "Several/many other Android platform APIs"
             )

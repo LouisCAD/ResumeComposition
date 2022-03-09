@@ -40,7 +40,7 @@ actual fun LouisCadResume() {
                 H1 { Text(resumeData.name) }
                 H2({
                     style { fontFamily("Roboto"); fontSize(14.px); fontWeight(300) }
-                }) { Text(resumeData.whatIAmLookingFor) }
+                }) { Text(resumeData.whatIAm) }
                 P { Text(resumeData.desiredContract) }
                 P {
                     LinkableText(resumeData.contactInfo.joinToString(separator = "\n"))
