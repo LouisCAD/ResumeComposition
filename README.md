@@ -8,7 +8,7 @@ This project is the source code of the resume/CV of Louis CAD.
 
 Here's a _blurry picture_ that you can click to see the crisp PDF document:
 
-[![](Louis%20Resume%202021-07-27.jpg)](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202022-03-09.pdf)
+[![](Louis%20Resume%202022-03-09.jpg)](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202022-03-09.pdf)
 
 You can also see the WEB version at [resume.louiscad.com](https://resume.louiscad.com).
 
