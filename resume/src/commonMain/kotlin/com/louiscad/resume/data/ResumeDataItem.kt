@@ -1,11 +1,11 @@
 package com.louiscad.resume.data
 
-import com.louiscad.resume.ImageVector
+import com.louiscad.resume.Svg
 
 sealed class ResumeDataItem {
 
     data class Text(val text: String) : ResumeDataItem()
-    data class Line(val text: String, val icon: ImageVector? = null) : ResumeDataItem()
+    data class Line(val text: String, val icon: Svg? = null) : ResumeDataItem()
 
     data class Skill(
         val name: String,

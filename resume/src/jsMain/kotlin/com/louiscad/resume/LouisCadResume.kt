@@ -41,7 +41,7 @@ actual fun LouisCadResume() {
                 H2({
                     style { fontFamily("Roboto"); fontSize(14.px); fontWeight(300) }
                 }) { Text(resumeData.whatIAm) }
-                P { Text(resumeData.desiredContract) }
+//                P { Text(resumeData.desiredContract) }
                 P {
                     LinkableText(resumeData.contactInfo.joinToString(separator = "\n"))
                 }
@@ -128,7 +128,7 @@ private fun ResumeBranch(tree: TitledTree<ResumeDataItem>) {
     when (tree) {
         is TitledTree.Branch -> ResumeSection(
             title = tree.title,
-            useKotlinColors = tree.useKotlinColors
+            borderGradient = tree.borderGradient
         ) {
             tree.nodes.forEach { ResumeBranch(it) }
         }

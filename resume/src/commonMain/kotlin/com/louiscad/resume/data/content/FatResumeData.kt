@@ -1,6 +1,7 @@
 package com.louiscad.resume.data.content
 
 import com.louiscad.resume.Color
+import com.louiscad.resume.Title
 import com.louiscad.resume.data.ResumeDataItem
 import com.louiscad.resume.data.TitledTree
 import com.louiscad.resume.data.invoke
@@ -59,11 +60,11 @@ object FatResumeData {
     )
 
     fun whatILove(): TitledTree.Branch<ResumeDataItem> = TitledTree.Branch(
-        title = "What I love",
+        title = Title("What I love"),
         color = Colors.darkGray,
         nodes = listOf(
             TitledTree.Branch(
-                title = "At work, on projects, and generally speaking",
+                title = Title("At work, on projects, and generally speaking"),
                 color = Colors.ktPurple,
                 "Innovating, ideating, and contributing to what I believe in.",
                 "Simplifying complex things",
@@ -78,7 +79,7 @@ object FatResumeData {
                 "Having fun while doing all of the above"
             ),
             TitledTree.Branch(
-                title = "In software development",
+                title = Title("In software development"),
                 color = Colors.gray,
                 "API design",
                 "OSS projects contributions and authoring",
@@ -88,7 +89,7 @@ object FatResumeData {
                 "Kotlin"
             ),
             TitledTree.Branch(
-                title = "Activities/hobbies",
+                title = Title("Activities/hobbies"),
                 color = Colors.gray,
                 //color = Color(0xFFE91ED5),
                 "Science (learning and using)",
@@ -106,10 +107,10 @@ object FatResumeData {
     )
 
     val experience: TitledTree.Branch<ResumeDataItem> = TitledTree.Branch(
-        title = "Experience",
+        title = Title("Experience"),
         color = Colors.darkGray,
         TitledTree.Branch(
-            title = "Open source authoring",
+            title = Title("Open source authoring"),
             color = Colors.ktPurple,
             "Splitties (set of mini libraries for Android & Kotlin Multiplatform development)",
             "refreshVersions (gradle plugin to easily discover and perform upgrades of dependency versions in Kotlin or other Gradle projects)",
@@ -120,10 +121,10 @@ object FatResumeData {
             "CameraCoroutines (draft)",
         ),
         TitledTree.Branch(
-            title = "2014-2021 Android app developer at Beepiz (fulltime)",
+            title = Title("2014-2021 Android app developer at Beepiz (fulltime)"),
             color = Colors.ktPurple,
             TitledTree.Branch(
-                title = "Technologies used",
+                title = Title("Technologies used"),
                 color = Colors.gray,
                 "Java 7 (mostly until 2016)",
                 "Kotlin (starting v1.0.4)",
@@ -131,7 +132,7 @@ object FatResumeData {
                 "Gradle (including Gradle plugin development)",
             ),
             TitledTree.Branch(
-                title = "Tasks",
+                title = Title("Tasks"),
                 color = Colors.gray,
                 "Made 7 production apps (alone)",
                 "Ensuring the reliability of 2 life critical apps for lone workers",
@@ -142,7 +143,7 @@ object FatResumeData {
             )
         ),
         TitledTree.Branch(
-            title = "Public speaking",
+            title = Title("Public speaking"),
             color = Color(0xFFA2A2A2),
             "🇫🇷 2021-06 FRAUG (French Android User Group): Google I/O debrief on Twitch, I focused on WearOS news",
             "🇬🇧 2021-05 The Developers Bakery (Podcast episode) hosted by Nicola Corti: refreshVersions (Listen at thebakery.dev/12)",
@@ -162,29 +163,29 @@ object FatResumeData {
     )
 
     val achievements: TitledTree.Branch<ResumeDataItem> = TitledTree.Branch(
-        title = "Achievements",
+        title = Title("Achievements"),
         color = Colors.darkGray,
         TitledTree.Branch(
-            title = "Issue reporting",
+            title = Title("Issue reporting"),
             color = Colors.gray,
             "Reported 190 Kotlin issues, with 107 resolved to date",
             "Reported 270 issues on Google's/Android's issue tracker, with 70 fixed to date"
         ),
         TitledTree.Branch(
-            title = "Recognition",
+            title = Title("Recognition"),
             color = Colors.ktPurple,
             "Google Developer Expert for Kotlin since 2020, referred by Kathrin Petrova from JetBrains"
         )
     )
 
     val skillsGeneral: TitledTree.Branch<ResumeDataItem> = TitledTree.Branch(
-        title = "Skills (general)",
+        title = Title("Skills (general)"),
         color = Colors.darkGray,
         TitledTree.Branch(
-            title = "Communication",
+            title = Title("Communication"),
             color = Colors.ktPurple,
             TitledTree.Branch(
-                title = "Languages",
+                title = Title("Languages"),
                 color = Colors.gray,
                 "Fluent in English, French native",
                 "I can quickly spot misspellings and typos, including my own as I write.",
@@ -192,7 +193,7 @@ object FatResumeData {
                 "Might struggle to understand spoken English in some contexts (also linked to infantile hearing loss)"
             ),
             TitledTree.Branch(
-                title = "Presentation tools",
+                title = Title("Presentation tools"),
                 color = Colors.gray,
                 "Mind mapping tools",
                 "Keynote with animations (macOS/iPadOS app)",
@@ -201,14 +202,14 @@ object FatResumeData {
             )
         ),
         TitledTree.Branch(
-            title = "Vector graphics",
+            title = Title("Vector graphics"),
             color = Colors.gray,
             "Familiar with Sketch (macOS app by Bohemian Coding)",
             "Affinity Designer (light user so far)",
             "Can write SVG path data by hand (not proficiently yet)",
         ),
         TitledTree.Branch(
-            title = "3D modeling",
+            title = Title("3D modeling"),
             color = Colors.gray,
             "Familiar with Shapr3D (iPad & macOS app), with it, I can model the Kotlin logo in under 30s",
             "Getting started with Fusion 360",
@@ -216,10 +217,10 @@ object FatResumeData {
     )
 
     val skillsDev: TitledTree.Branch<ResumeDataItem> = TitledTree.Branch(
-        title = "Skills (software development)",
+        title = Title("Skills (software development)"),
         color = Colors.darkGray,
         TitledTree.Branch(
-            title = "Concepts",
+            title = Title("Concepts"),
             color = Colors.gray,
             "Binary, hexadecimal representation",
             "Backwards and forward compatibility",
@@ -231,7 +232,7 @@ object FatResumeData {
             "Defensive programming",
         ),
         TitledTree.Branch(
-            title = "Kotlin",
+            title = Title("Kotlin"),
             color = Colors.ktPurple,
             "Coroutines (including channels, semaphores, mutexes, select, flow and all sorts of callback wrapping)",
             "Multiplatform library development, including Kotlin/Native",
@@ -239,10 +240,10 @@ object FatResumeData {
             "Gradle plugin development (build automation)",
         ),
         TitledTree.Branch(
-            title = "Android",
+            title = Title("Android"),
             color = Colors.ktPurple,
             TitledTree.Branch(
-                title = "Specific skills",
+                title = Title("Specific skills"),
                 color = Colors.gray,
                 "Making entire mobile apps",
                 "Making WearOS apps and WatchFaces",
@@ -250,7 +251,7 @@ object FatResumeData {
                 "Extensive knowledge about Android dev history"
             ),
             TitledTree.Branch(
-                title = "APIs I'm familiar with",
+                title = Title("APIs I'm familiar with"),
                 color = Colors.gray,
                 "android.view (programmatically)",
                 "Jetpack Compose",
@@ -262,7 +263,7 @@ object FatResumeData {
             )
         ),
         TitledTree.Branch(
-            title = "Experimenting with",
+            title = Title("Experimenting with"),
             color = Colors.ktPurple,
             "Swift, and Kotlin/Native interop",
             "iOS dev, including programmatic UIKit",
@@ -270,7 +271,7 @@ object FatResumeData {
             "Compose for Desktop",
         ),
         TitledTree.Branch(
-            title = "I also know about",
+            title = Title("I also know about"),
             color = Colors.gray,
             "SQLite (fairly knowledgeable about it)",
             "Protobuf (& flatbuffers)",

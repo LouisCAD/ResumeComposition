@@ -1,11 +1,10 @@
 package com.louiscad.resume.data
 
-import com.louiscad.resume.Color
-import com.louiscad.resume.ImageVector
+import com.louiscad.resume.*
 
 
 internal operator fun TitledTree.Branch.Companion.invoke(
-    title: String,
+    title: Title,
     color: Color? = null,
     vararg textNodes: String
 ): TitledTree.Branch<ResumeDataItem> {
@@ -17,7 +16,7 @@ internal operator fun TitledTree.Branch.Companion.invoke(
 }
 
 internal operator fun TitledTree.Branch.Companion.invoke(
-    title: String,
+    title: Title,
     vararg textNodes: String
 ): TitledTree.Branch<ResumeDataItem> {
     return TitledTree.Branch(
@@ -27,23 +26,35 @@ internal operator fun TitledTree.Branch.Companion.invoke(
 }
 
 internal operator fun TitledTree.Branch.Companion.invoke(
-    title: String,
-    useKotlinColors: Boolean,
+    title: Title,
+    borderGradient: SweepGradient,
     vararg textNodes: String
 ): TitledTree.Branch<ResumeDataItem> {
     return TitledTree.Branch(
         title = title,
-        useKotlinColors = useKotlinColors,
+        borderGradient = borderGradient,
         nodes = textNodes.asList().map { TitledTree.Leaf(ResumeDataItem.Text(it)) }
     )
 }
 
 internal operator fun TitledTree.Branch.Companion.invoke(
-    title: String,
-    vararg lines: Pair<String, ImageVector?>
+    title: Title,
+    vararg lines: Pair<String, Svg?>
 ): TitledTree.Branch<ResumeDataItem> {
     return TitledTree.Branch(
         title = title,
+        nodes = lines.asList().map { (text, icon) -> TitledTree.Leaf(ResumeDataItem.Line(text, icon)) }
+    )
+}
+
+internal operator fun TitledTree.Branch.Companion.invoke(
+    title: Title,
+    borderGradient: SweepGradient,
+    vararg lines: Pair<String, Svg?>
+): TitledTree.Branch<ResumeDataItem> {
+    return TitledTree.Branch(
+        title = title,
+        borderGradient = borderGradient,
         nodes = lines.asList().map { (text, icon) -> TitledTree.Leaf(ResumeDataItem.Line(text, icon)) }
     )
 }

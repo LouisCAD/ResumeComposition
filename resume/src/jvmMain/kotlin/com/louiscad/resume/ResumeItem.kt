@@ -23,7 +23,8 @@ actual fun ResumeItem(data: ResumeDataItem) {
       )
       is ResumeDataItem.Line -> Row {
          data.icon?.let {
-            Icon(imageVector = it, contentDescription = null)
+//            Icon(imageVector = it, contentDescription = null)
+            TODO("Not supported yet")
          }
          Text(
             text = data.text,
