@@ -27,7 +27,7 @@ actual fun LouisCadResume() {
     Style(resumeStyleSheet)
     val resumeData = LightResumeData
     Div({
-        classes(resumeStyleSheet.root)
+        classes(resumeStyleSheet.trunk)
         style {
             display(DisplayStyle.Flex)
             flexDirection(FlexDirection.Row)
@@ -78,21 +78,17 @@ actual fun LouisCadResume() {
                     }) {
                         LinkableText(resumeData.madeWith)
                     }
+                    P({
+                        style { textAlign("center") }
+                    }) {
+                        val todayDateString = js("new Date().toISOString().slice(0, 10)")
+                        Text("Generation date: $todayDateString")
+                    }
                 }
             }
         }
         ResumeColumn(weight = resumeData.columnsWeights.skillsDev) {
             ResumeBranch(resumeData.skillsDev)
-            Div({
-                classes(resumeStyleSheet.nonSectionColumn)
-            }) {
-                P({
-                    style { textAlign("center") }
-                }) {
-                    val todayDateString = js("new Date().toISOString().slice(0, 10)")
-                    Text("Generation date: $todayDateString")
-                }
-            }
         }
     }
 }

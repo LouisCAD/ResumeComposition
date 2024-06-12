@@ -21,7 +21,7 @@ object LightResumeData {
 
     val title = "Senior software developer"
 
-    val whatIAm = "Kotlin Multiplatform and Android expert, focused on reliability"
+    val whatIAm = "Reliability - Innovation - Fun"
 
     val contactInfo: List<String> = listOf(
         "Email: [louis.cognault@gmail.com](mailto:louis.cognault@gmail.com)",
@@ -31,7 +31,7 @@ object LightResumeData {
     val locationInfo = "Currently located in Tours, France"
 
     val myLinks: List<String> = listOf(
-        "See my work on GitHub: [github.com/LouisCAD](https://github.com/LouisCAD)",
+        "Open source work: [github.com/LouisCAD](https://github.com/LouisCAD)",
         "See my Twitter [@Louis_CAD](https://twitter.com/Louis_CAD)"
     )
 
@@ -66,11 +66,13 @@ object LightResumeData {
             TitledTree.Branch(
                 title = Title("Activities/hobbies", Svg("cards-playing")),
                 borderGradient = SweepGradient.hobbies,
-                "Science (learning and using)",
-                "Understanding people in depth (sometimes)",
-                "Recumbent cycling (that's also how I commute)",
-                "Lego technic (custom builds)",
-                "DIY (including electronics)"
+                "Science (learning and using)" to Svg("atom"),
+                "Understanding people in depth (sometimes)" to Svg("brain"),
+                "Recumbent bikes (commuting & speedy fun)" to Svg("recumbent-cycle"),
+                "Playing piano" to Svg("piano"),
+                "LEGO Technic (custom builds)" to Svg("toy-brick-outline"),
+                "DIY (including electronics)" to Svg("tools"),
+                "Bike Polo (beginner)" to Svg("bike-pedal")
             )
         )
     )
@@ -80,22 +82,20 @@ object LightResumeData {
         TitledTree.Branch(
             title = Title("Open source authoring", Svg("github")),
             borderGradient = SweepGradient.oss,
-            "[Splitties](https://github.com/LouisCAD/Splitties) (set of mini libraries for Android & Kotlin Multiplatform development), 2.4K stars on GitHub",
+            "[Splitties](https://github.com/LouisCAD/Splitties) (set of mini libraries for Android & KMP dev), 2.4K stars on GitHub",
             "[refreshVersions](https://github.com/jmfayard/refreshVersions), Gradle plugin, almost 1.6K stars",
             "[CompleteKotlin](https://github.com/LouisCAD/CompleteKotlin), 265 stars since release in June 2021",
             "[beepiz-external-control](https://github.com/Beepiz/beepiz-external-control) (IPC on Android)",
             "[BleGattCoroutines](https://github.com/Beepiz/BleGattCoroutines) (Bluetooth Low Energy GATT client for Android), 448 stars",
-            "Draft projects: [CameraCoroutines](https://github.com/Beepiz/CameraCoroutines), [BleScanCoroutines](https://github.com/Beepiz/BleScanCoroutines) (draft)",
+            "Drafts: [CameraCoroutines](https://github.com/Beepiz/CameraCoroutines), [BleScanCoroutines](https://github.com/Beepiz/BleScanCoroutines)",
+            "More KT & Gradle projects in [Github/Splitties](https://github.com/orgs/Splitties/repositories)…",
+            "Contributed to various projects, including kotlinx.coroutines"
         ),
         TitledTree.Branch(
             title = Title("2014-2022 Android app developer at Beepiz (fulltime)"),
             TitledTree.Branch(
                 title = Title("Technologies used", Svg("code-tags-check")),
-                "Java 7 (mostly until 2016)",
-                "Kotlin (starting v1.0.4)",
-                "Kotlin coroutines (since 2017)",
-                "Kotlin Multiplatform (since 2020)",
-                "Gradle (including Gradle plugin development)",
+                "Java, Kotlin, coroutines, KMP, Gradle, more…",
             ),
             TitledTree.Branch(
                 title = Title("Tasks", Svg("check-all")),
@@ -108,11 +108,17 @@ object LightResumeData {
             )
         ),
         TitledTree.Branch(
-            title = Title("Public speaking", Svg("microphone-variant")),
+            title = Title("2022-2024 Independent"),
+            "Maintain & evolve a paid KMP charting library",
+            "Reduce cloud/server bills with coroutines",
+            "Develop a Wear OS Watch Faces app",
+            "Generate transparent video with Compose",
+        ),
+        TitledTree.Branch(
+            title = Title("Public speaking (2017-2024)", Svg("microphone-variant")),
             borderGradient = SweepGradient.speaking,
-            "Gave 27 talks (17 in 🇬🇧 and 10 in 🇫🇷) on Kotlin, coroutines, Android, and WearOS between 2017 and 2023 " +
-                    "at conferences like Droidcon, Android Makers, DevFest, Talking.kt, Mobilization (PL), and FOSDEM, and at various meetups",
-            "Participated in 3 podcast episodes: Android Leaks twice, and The Developers Bakery once"
+            "Gave 29 talks (19 in 🇬🇧 and 10 in 🇫🇷) on Kotlin, coroutines, Android, and WearOS",
+            "Participated in 3 podcast episodes: Android Leaks (twice), and The Developers Bakery"
         )
     )
 
@@ -121,8 +127,9 @@ object LightResumeData {
         TitledTree.Branch(
             title = Title("Issue reporting", Svg("alert-circle-check-outline")),
             borderGradient = SweepGradient.oss,
-            "Reported 202 Kotlin issues on YouTrack, with 126 resolved to date",
-            "Reported 295 issues on Google's/Android's issue tracker, with 81 fixed to date"
+            "[Reported 262 issues on JetBrains YouTrack](https://youtrack.jetbrains.com/issues?q=reported%20by:%20louis.cad), with 188 resolved to date",
+            "[Reported 343 issues on Google's/Android's issue tracker](https://issuetracker.google.com/issues?q=reporter:louis.cognault@gmail.com), with 106 fixed to date",
+            "[Reported 386 external issues on GitHub](https://github.com/search?q=author%3ALouisCAD+-org%3ASplitties+-user%3ALouisCAD&type=issues&ref=advsearch), with 284 closed to date"
         ),
         TitledTree.Branch(
             title = Title("Recognition", Svg("certificate")),
@@ -138,8 +145,8 @@ object LightResumeData {
             borderGradient = SweepGradient.lessImportant,
             TitledTree.Branch(
                 title = Title("Languages", Svg("flag-variant")),
-                "Fluent in English, French native",
-                "Good at spotting misspellings and typos (incl. own)",
+                "Fluent in English, French native, learning Dutch",
+                "Typos and misspellings spotter (incl. own)",
                 "Comfortable speaking publicly"
             ),
             TitledTree.Branch(
@@ -164,8 +171,8 @@ object LightResumeData {
         )
     )
 
-    val madeWith = "Made in Kotlin with Compose for Web\n" +
-            "See the code and the Android version on [github.com/LouisCAD/ResumeComposition](https://github.com/LouisCAD/ResumeComposition)"
+    val madeWith = "Made in Kotlin with Compose HTML. Code ⬇\n" +
+            "[github.com/LouisCAD/ResumeComposition](https://github.com/LouisCAD/ResumeComposition)"
 
     val skillsDev: TitledTree.Branch<ResumeDataItem> = TitledTree.Branch(
         title = Title("Skills (software dev)", Svg("math-compass")),
@@ -184,7 +191,9 @@ object LightResumeData {
             title = Title("Kotlin", Svg("language-kotlin")),
             borderGradient = SweepGradient.kotlin,
             "Coroutines (in depth)",
-            "Multiplatform library development, including Kotlin/Native",
+            "Compose Multiplatform",
+            "Advanced graphics with Compose Canvas",
+            "KMP library development, incl. Kotlin/Native",
             "Scripting, partial and full automation",
             "Gradle plugin development (build automation)",
         ),
@@ -200,7 +209,7 @@ object LightResumeData {
             ),
             TitledTree.Branch(
                 title = Title("APIs I'm familiar with"),
-                "Jetpack Compose",
+                "Jetpack Compose (including GraphicsLayer)",
                 "android.view (programmatically)",
                 "BLE (BluetoothLeScanner & BluetoothGatt)",
                 "SensorManager",
@@ -212,9 +221,11 @@ object LightResumeData {
         TitledTree.Branch(
             title = Title("Experimenting with", Svg("flask-outline")),
             borderGradient = SweepGradient.leastImportant,
+            "Generating transparent videos w/ Compose & coroutines",
+            "Compose HTML, and Compose for Desktop",
             "Swift, and Kotlin/Native interop",
             "iOS dev, including programmatic UIKit",
-            "Compose HTML, and Compose for Desktop"
+            "Rust (for embedded systems dev)"
         )
     )
 }
