@@ -4,11 +4,11 @@
 
 This project is the source code of the resume/CV of Louis CAD.
 
-[The latest PDF export is available here](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202023-08-31.pdf), it is ready to print.
+[The latest PDF export is available here](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202024-06-12.pdf), it is ready to print.
 
 Here's a _blurry picture_ that you can click to see the crisp PDF document:
 
-[![](Louis%20Resume%202023-08-31.jpg)](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202023-08-31.pdf)
+[![](Louis%20Resume%202024-06-12.jpg)](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202024-06-12.pdf)
 
 You can also see the WEB version at [resume.louiscad.com](https://resume.louiscad.com).
 
@@ -32,7 +32,7 @@ I made my Resume with Jetpack Compose for multiple reasons:
 
 ## How
 
-If you just want to see the latest Resume, [it is here in PDF](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202023-08-31.pdf).
+If you just want to see the latest Resume, [it is here in PDF](https://github.com/LouisCAD/ResumeComposition/raw/main/Louis%20CAD%20Resume%202024-06-12.pdf).
 
 ### Exporting to PDF or printing the WEB version
 
