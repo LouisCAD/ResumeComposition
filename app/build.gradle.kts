@@ -17,7 +17,7 @@ tasks.register<Copy>("buildForGitHubPages") {
     description = "This is a custom task (not from Kotlin Gradle plugin) that will " +
             "build the production website and put it in the docs directory."
     dependsOn("jsBrowserDistribution")
-    from(layout.buildDirectory.dir("dist/productionExecutable"))
+    from(layout.buildDirectory.dir("dist/js/productionExecutable"))
     into(rootProject.layout.projectDirectory.dir("docs"))
 }
 

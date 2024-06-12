@@ -84,7 +84,7 @@ If you just want to build the webpage, run the following command:
 ./gradlew :app:jsBrowserDistribution
 ```
 
-Once the command completes, you'll find the resulting html and js files in the [app/build/distributions](app/build/distributions) directory.
+Once the command completes, you'll find the resulting html and js files in the [app/build/dist/js](app/build/dist/js) directory.
 You can simply open the [index.html](app/build/distributions/index.html) file in a WEB browser like Google Chrome or Mozilla Firefox to see the result. The entire content of the directory can then be moved to a place that will serve the static files.
 
 If you want to have Gradle automatically rebuild on save, and refresh the page on compilation success, you can run the following command instead:
