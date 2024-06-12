@@ -7,11 +7,9 @@ import org.jetbrains.compose.web.css.Color
 
 object LouisCadResumeStyleSheet : ResumeStyleSheet() {
 
+    override val paperSize: String get() = "A4 landscape"
+
     init {
-        "@page" {
-            property("size", "A4 landscape")
-            margin(0.mm)
-        }
         ".text-icon" {
             property("vertical-align", "middle")
             marginTop(-2.px)
@@ -48,14 +46,13 @@ object LouisCadResumeStyleSheet : ResumeStyleSheet() {
             height(12.px)
             marginRight(4.px)
         }
+        "html" style {
+            minWidth(1049.px)
+        }
     }
 
     private val borderSize = 2.px
     private val borderRadius = 10.px
-
-    override val root by style {
-        minWidth(1049.px)
-    }
 
     override val borderedSectionWrapper: String by style {
         padding(borderSize)

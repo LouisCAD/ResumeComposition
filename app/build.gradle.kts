@@ -1,8 +1,10 @@
 import org.jetbrains.compose.compose
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     kotlin("multiplatform")
+    kotlin("plugin.compose")
     id("org.jetbrains.compose")
     id("com.android.application")
 }
@@ -15,15 +17,15 @@ tasks.register<Copy>("buildForGitHubPages") {
     description = "This is a custom task (not from Kotlin Gradle plugin) that will " +
             "build the production website and put it in the docs directory."
     dependsOn("jsBrowserDistribution")
-    from(layout.buildDirectory.dir("distributions"))
+    from(layout.buildDirectory.dir("dist/productionExecutable"))
     into(rootProject.layout.projectDirectory.dir("docs"))
 }
 
 kotlin {
-    android()
+    androidTarget()
     jvm("desktop") {
-        compilations.all {
-            kotlinOptions.jvmTarget = "11"
+        compilerOptions {
+            jvmTarget = JvmTarget.JVM_11
         }
         testRuns["test"].executionTask.configure {
             useJUnitPlatform()
@@ -83,15 +85,16 @@ compose.desktop {
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdk = 34
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
         applicationId = "com.louiscad.resume"
-        minSdkVersion(24)
-        targetSdkVersion(30)
+        minSdk = 24
+        targetSdk = 33
         versionCode = 1
         versionName = property("thisProjectVersion") as String
     }
+    namespace = "com.louiscad.resume.app"
     buildTypes {
         getByName("release") {
             isMinifyEnabled = true

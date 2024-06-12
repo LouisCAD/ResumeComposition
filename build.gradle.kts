@@ -3,7 +3,6 @@ buildscript {
         gradlePluginPortal()
         google()
         mavenCentral()
-        jcenter()
     }
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:_")
@@ -18,6 +17,5 @@ allprojects {
     repositories {
         mavenCentral()
         google()
-        maven(url = "https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }

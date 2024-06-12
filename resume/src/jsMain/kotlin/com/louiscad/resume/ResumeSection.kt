@@ -3,11 +3,7 @@ package com.louiscad.resume
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.compositionLocalOf
-import com.louiscad.resume.data.ResumeDataItem
-import org.jetbrains.compose.common.foundation.layout.Box
-import org.jetbrains.compose.common.material.Text
 import org.jetbrains.compose.web.css.background
-import org.jetbrains.compose.web.css.backgroundColor
 import org.jetbrains.compose.web.dom.*
 import org.w3c.dom.HTMLHeadingElement
 
@@ -54,14 +50,6 @@ fun ResumeSection(
             }
         }
     }
-}
-
-@Composable
-fun ResumeSection(
-    title: Title,
-    items: List<ResumeDataItem>
-) = ResumeSection(title = title) {
-    items.forEach { item -> Box { ResumeItem(item) } }
 }
 
 private val CurrentDepth = compositionLocalOf { 1u }

@@ -1,7 +1,9 @@
 import org.jetbrains.compose.compose
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     kotlin("multiplatform")
+    kotlin("plugin.compose")
     id("org.jetbrains.compose")
     id("com.android.library")
 }
@@ -10,10 +12,10 @@ group = "com.louiscad.resume"
 version = property("thisProjectVersion") as String
 
 kotlin {
-    android()
+    androidTarget()
     jvm("desktop") {
-        compilations.all {
-            kotlinOptions.jvmTarget = "11"
+        compilerOptions {
+            jvmTarget = JvmTarget.JVM_11
         }
         testRuns["test"].executionTask.configure {
             useJUnitPlatform()
@@ -45,7 +47,7 @@ kotlin {
         val jsMain by getting {
             dependencies {
                 api(compose.web.core)
-                api(compose.web.widgets)
+//                api(compose.web.widgets)
             }
         }
         val jsTest by getting
@@ -56,7 +58,7 @@ kotlin {
                 api(AndroidX.core.ktx)
             }
         }
-        val androidTest by getting {
+        val androidUnitTest by getting {
             dependencies {
                 implementation(Testing.junit4)
             }
@@ -69,10 +71,11 @@ kotlin {
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdk = 34
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
-        minSdkVersion(24)
-        targetSdkVersion(30)
+        minSdk = 24
+        targetSdk = 33
     }
+    namespace = "com.louiscad.resume"
 }

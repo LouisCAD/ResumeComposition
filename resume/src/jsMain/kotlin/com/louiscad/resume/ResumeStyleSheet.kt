@@ -1,28 +1,7 @@
 package com.louiscad.resume
 
 import com.louiscad.resume.extensions.margin
-import com.louiscad.resume.extensions.padding
-import org.jetbrains.compose.web.css.Color
-import org.jetbrains.compose.web.css.DisplayStyle
-import org.jetbrains.compose.web.css.FlexDirection
-import org.jetbrains.compose.web.css.LineStyle
-import org.jetbrains.compose.web.css.StyleSheet
-import org.jetbrains.compose.web.css.border
-import org.jetbrains.compose.web.css.borderRadius
-import org.jetbrains.compose.web.css.color
-import org.jetbrains.compose.web.css.display
-import org.jetbrains.compose.web.css.flexDirection
-import org.jetbrains.compose.web.css.fontFamily
-import org.jetbrains.compose.web.css.fontSize
-import org.jetbrains.compose.web.css.fontWeight
-import org.jetbrains.compose.web.css.media
-import org.jetbrains.compose.web.css.mm
-import org.jetbrains.compose.web.css.paddingBottom
-import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.css.rgb
-import org.jetbrains.compose.web.css.selectors.descendant
-import org.jetbrains.compose.web.css.selectors.selector
-import org.jetbrains.compose.web.css.textAlign
+import org.jetbrains.compose.web.css.*
 
 abstract class ResumeStyleSheet : StyleSheet() {
     init {
@@ -45,9 +24,16 @@ abstract class ResumeStyleSheet : StyleSheet() {
         "h3" { fontSize(16.px) }
         "h4" { fontSize(14.px) }
         "h5" { fontSize(13.px) }
+
+        "@page" {
+            property("size", paperSize)
+            margin(0.mm)
+        }
     }
 
-    open val root by style {
+    open val paperSize get() = "auto"
+
+    open val trunk by style {
         fontFamily("Roboto", "sans-serif")
         fontWeight(400)
         property("white-space", "pre-line")
@@ -59,10 +45,6 @@ abstract class ResumeStyleSheet : StyleSheet() {
         media("print") {
             margin((-10).px)
         }
-        "@page" {
-            property("size", "auto")
-            margin(0.mm)
-        }
         "html" {
             margin(0.mm)
         }
@@ -73,8 +55,8 @@ abstract class ResumeStyleSheet : StyleSheet() {
     }
     open val sectionsColumn by style {
         "h1, h2, h3, h4, h5, h6".split(", ").map {
-            descendant(self, selector(it))
-        }.joinToString() style {
+            desc(self, selector(it))
+        }.let { group(*it.toTypedArray()) } style {
             textAlign("center")
             property("margin-block-start", 8.px)
             property("margin-block-end", 8.px)
